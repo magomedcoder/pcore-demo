@@ -16,7 +16,8 @@
         "pcore/database": "v1.2.*",
         "pcore/validator": "v1.1.*",
         "pcore/redis": "v1.2.*",
-        "pcore/cache": "v1.2.*"
+        "pcore/cache": "v1.2.*",
+        "pcore/queue": "v1.0.*"
     },
     "autoload": {
         "psr-4": {
