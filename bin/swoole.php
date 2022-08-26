@@ -6,6 +6,7 @@ use App\Kernel\{Bootstrap, Kernel};
 use PCore\Di\Context;
 use PCore\HttpMessage\ServerRequest;
 use PCore\HttpServer\ResponseEmitter\SwooleResponseEmitter;
+use Swoole\Constant;
 use Swoole\Http\{Request, Response, Server};
 
 define('BASE_PATH', dirname(__DIR__) . '/');
@@ -16,17 +17,18 @@ define('BASE_PATH', dirname(__DIR__) . '/');
         throw new Exception('Требуется swoole');
     }
     Bootstrap::boot(true);
-    $config = config('server.swoole', []);
-    $server = new Server($config['host'], $config['port']);
+    $server = new Server('0.0.0.0', 9501);
     /** @var Kernel $kernel */
     $kernel = Context::getContainer()->make(Kernel::class);
     $server->on('request', function (Request $request, Response $response) use ($kernel) {
-        $psrResponse = $kernel->through(ServerRequest::createFromSwooleRequest($request, [
+        (new SwooleResponseEmitter())->emit($kernel->through(ServerRequest::createFromSwooleRequest($request, [
             'request' => $request,
-            'response' => $response,
-        ]));
-        (new SwooleResponseEmitter())->emit($psrResponse, $response);
+            'response' => $response
+        ])), $response);
     });
-    $server->set($config['settings']);
+    $server->set([
+        Constant::OPTION_WORKER_NUM => swoole_cpu_num(),
+        Constant::OPTION_MAX_REQUEST => 100000
+    ]);
     $server->start();
 })();

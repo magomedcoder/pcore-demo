@@ -25,8 +25,7 @@ class Console
     {
         $config = Scanner::scanConfig(base_path('vendor/composer/installed.json'));
         $application = new Application();
-        $commands = array_merge($this->commands, $config['commands'], CommandCollector::all());
-        foreach ($commands as $command) {
+        foreach (array_merge($this->commands, $config['commands'], CommandCollector::all()) as $command) {
             $application->add(new $command());
         }
         $application->run();

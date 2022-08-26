@@ -16,7 +16,7 @@ class Kernel extends HttpKernel
     protected array $middlewares = [
         'App\Middlewares\ExceptionHandleMiddleware',
         'App\Middlewares\CorsMiddleware',
-        'App\Middlewares\ParseBodyMiddleware',
+        'PCore\HttpServer\Middlewares\ParseBodyMiddleware',
         'PCore\HttpServer\Middlewares\RoutingMiddleware'
     ];
 

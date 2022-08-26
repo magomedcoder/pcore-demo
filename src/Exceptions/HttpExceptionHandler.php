@@ -19,7 +19,7 @@ class HttpExceptionHandler implements ExceptionHandlerInterface, StoppableExcept
 
     public function handle(Throwable $throwable, ServerRequestInterface $request): ?ResponseInterface
     {
-        return Response::json(false, [], [
+        return Response::json(false, null, [
             'general' => [
                 'code' => $statusCode = $throwable->getCode(),
                 'message' => $throwable->getMessage()

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Abstracts\AbstractController;
-use App\Kernel\Response;
 use App\Services\PostService;
+use PCore\HttpMessage\Response;
 use PCore\Routing\Annotations\{Controller, GetMapping, PostMapping};
 use Psr\Http\Message\{ResponseInterface, ServerRequestInterface};
 

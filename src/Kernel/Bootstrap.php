@@ -7,8 +7,9 @@ namespace App\Kernel;
 use PCore\Aop\{Scanner, ScannerConfig};
 use PCore\Config\Repository;
 use PCore\Di\Context;
-use PCore\Event\{ListenerCollector, ListenerProvider};
+use PCore\Event\ListenerProvider;
 use ReflectionException;
+use function putenv;
 
 /**
  * Class Bootstrap
@@ -24,11 +25,19 @@ class Bootstrap
     public static function boot(bool $enable = false): void
     {
         $container = Context::getContainer();
+        if (file_exists($envFile = base_path('.env'))) {
+            $variables = parse_ini_file($envFile, false, INI_SCANNER_RAW);
+            foreach ($variables as $key => $value) {
+                putenv(sprintf('%s=%s', $key, $value));
+            }
+        }
         $repository = $container->make(Repository::class);
         $repository->scan(base_path('./config'));
-        $logger = $container->make(Logger::class);
-        if ('cli' === PHP_SAPI) {
-            $logger->debug('Сервер запущен.');
+        if (env('LOGGING_START')) {
+            $logger = $container->make(Logger::class);
+            if ('cli' === PHP_SAPI) {
+                $logger->debug('Сервер запущен.');
+            }
         }
         if ($enable) {
             Scanner::init(new ScannerConfig($repository->get('di.aop')));
@@ -37,9 +46,10 @@ class Bootstrap
             $container->bind($id, $value);
         }
         $listenerProvider = $container->make(ListenerProvider::class);
-        $listeners = $repository->get('listeners');
-        foreach (array_unique(array_merge(ListenerCollector::getListeners(), $listeners)) as $listener) {
-            $listenerProvider->addListener($container->make($listener));
+        if (!empty($listeners = $repository->get('listeners', []))) {
+            foreach ($listeners as $listener) {
+                $listenerProvider->addListener($container->make($listener));
+            }
         }
     }
 
