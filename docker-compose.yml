@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+    pcore:
+        container_name: pcore
+        build:
+            context: .
+            #dockerfile: Dockerfile
+            dockerfile: Dockerfile.dev
+        restart: always
+        ports:
+            - "2222:22"
+            - "9501:9501"
+        volumes:
+            - .:/opt/pcore-demo
+        links:
+            - mariadb:host_db
+            - redis:host_redis
+    mariadb:
+        image: mariadb
+        container_name: pcore-mariadb
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=pcore_demo
+            - MYSQL_USER=pcore
+            - MYSQL_PASSWORD=pcore
+        #ports:
+        #    - "3306:3306"
+        volumes:
+            - ./migration:/docker-entrypoint-initdb.d
+            - ./volumes/mariadb/:/var/lib/mysql
+    redis:
+        image: redis:alpine
+        container_name: pcore-redis
+        restart: always

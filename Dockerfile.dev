@@ -1,0 +1,31 @@
+FROM magomedcoder/alpine-swoole:latest
+
+MAINTAINER Magomedcoder <info@magomedcoder.ru>
+
+RUN apk --update add --no-cache openssh supervisor \
+    && sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
+    && echo "root:root" | chpasswd \
+    && rm -rf /var/cache/apk/* \
+    && sed -ie 's/#Port 22/Port 22/g' /etc/ssh/sshd_config \
+    && /usr/bin/ssh-keygen -A \
+    && ssh-keygen -t rsa -b 4096 -f  /etc/ssh/ssh_host_key \
+    && echo "export VISIBLE=now" >> /etc/profile
+
+RUN apk --update add --no-cache php8-tokenizer \
+    && set -ex \
+    && cd /etc/php8 \
+    && { \
+        echo "upload_max_filesize=100M"; \
+        echo "post_max_size=108M"; \
+        echo "memory_limit=1024M"; \
+        echo "date.timezone=Europe/Moscow"; \
+    } | tee conf.d/99-overrides.ini \
+    && ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime \
+    && echo "Europe/Moscow" > /etc/timezone \
+    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+EXPOSE 22 9501
+
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

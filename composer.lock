@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "593f5b825dabdeab916abe3563709a1c",
+    "content-hash": "8d7cdfb2f6b9e29973fdb622e8475183",
     "packages": [
         {
             "name": "brick/math",
@@ -1259,60 +1259,6 @@
             "time": "2022-08-26T22:03:09+00:00"
         },
         {
-            "name": "pcore/queue",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pcore-framework/queue.git",
-                "reference": "92717849ef62e158b7804907b0ca564b31aca860"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/queue/zipball/92717849ef62e158b7804907b0ca564b31aca860",
-                "reference": "92717849ef62e158b7804907b0ca564b31aca860",
-                "shasum": ""
-            },
-            "require": {
-                "ext-redis": "*",
-                "php": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "pcore": {
-                    "config": "PCore\\Queue\\ConfigProvider"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PCore\\Queue\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Magomedcoder",
-                    "email": "info@magomedcoder.ru"
-                }
-            ],
-            "description": "The queue component for PCore",
-            "homepage": "https://github.com/pcore-framework/queue",
-            "keywords": [
-                "framework",
-                "pcore",
-                "pcore-component",
-                "pcore-framework",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/pcore-framework/queue/issues",
-                "source": "https://github.com/pcore-framework/queue/tree/v1.0"
-            },
-            "time": "2022-08-21T19:45:02+00:00"
-        },
-        {
             "name": "pcore/redis",
             "version": "v1.3.0",
             "source": {
@@ -1461,16 +1407,16 @@
         },
         {
             "name": "pcore/utils",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/utils.git",
-                "reference": "4fd4f7c7c3ca72605f3e62b1996474b00fc648f8"
+                "reference": "5a8b5029ced3638d88b2ab722794a41d1c8a81f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/utils/zipball/4fd4f7c7c3ca72605f3e62b1996474b00fc648f8",
-                "reference": "4fd4f7c7c3ca72605f3e62b1996474b00fc648f8",
+                "url": "https://api.github.com/repos/pcore-framework/utils/zipball/5a8b5029ced3638d88b2ab722794a41d1c8a81f3",
+                "reference": "5a8b5029ced3638d88b2ab722794a41d1c8a81f3",
                 "shasum": ""
             },
             "require": {
@@ -1516,9 +1462,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/utils/issues",
-                "source": "https://github.com/pcore-framework/utils/tree/v1.3.0"
+                "source": "https://github.com/pcore-framework/utils/tree/v1.3.1"
             },
-            "time": "2022-08-26T20:38:38+00:00"
+            "time": "2022-08-28T08:44:37+00:00"
         },
         {
             "name": "pcore/validator",

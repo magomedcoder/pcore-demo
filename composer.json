@@ -16,8 +16,7 @@
         "pcore/database": "v1.3.*",
         "pcore/validator": "v1.1.*",
         "pcore/redis": "v1.3.*",
-        "pcore/cache": "v1.2.*",
-        "pcore/queue": "v1.0.*"
+        "pcore/cache": "v1.2.*"
     },
     "autoload": {
         "psr-4": {
@@ -30,5 +29,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.example.env', '.env');\""
+        ]
     }
 }
