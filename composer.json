@@ -6,25 +6,23 @@
     "license": "MIT",
     "require": {
         "php": "^8.0",
-        "pcore/http-server": "v1.3.*",
-        "pcore/config": "v1.3.*",
-        "pcore/aop": "v1.3.*",
-        "pcore/di": "v1.3.*",
-        "pcore/event": "v1.2.*",
-        "pcore/session": "v1.2.*",
-        "pcore/console": "v1.3.*",
-        "pcore/database": "v1.3.*",
+        "pcore/init": "v1.0.*",
+        "pcore/http-server": "v1.4.*",
+        "pcore/config": "v1.4.*",
+        "pcore/aop": "v1.4.*",
+        "pcore/di": "v1.4.*",
+        "pcore/event": "v1.3.*",
+        "pcore/session": "v1.3.*",
+        "pcore/console": "v1.4.*",
+        "pcore/database": "v1.4.*",
         "pcore/validator": "v1.1.*",
-        "pcore/redis": "v1.3.*",
-        "pcore/cache": "v1.2.*"
+        "pcore/redis": "v1.4.*",
+        "pcore/cache": "v1.3.*"
     },
     "autoload": {
         "psr-4": {
             "App\\": "src/"
-        },
-        "files": [
-            "src/Kernel/helpers.php"
-        ]
+        }
     },
     "config": {
         "optimize-autoloader": true,

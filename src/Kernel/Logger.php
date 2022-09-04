@@ -17,14 +17,14 @@ class Logger extends BaseLogger
     {
         $this->logger['app'] = new MonoLogger('app', [
             new RotatingFileHandler(
-                base_path('var/log/app.log'),
+                basePath('var/log/app.log'),
                 180,
                 MonoLogger::DEBUG
             ),
         ]);
         $this->logger['sql'] = new MonoLogger('sql', [
             new RotatingFileHandler(
-                base_path('var/log/sql.log'),
+                basePath('var/log/sql.log'),
                 180,
                 MonoLogger::DEBUG
             )

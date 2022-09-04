@@ -2,24 +2,27 @@
 
 declare(strict_types=1);
 
+use PCore\Cache\Drivers\{FileDriver, MemcachedDriver, RedisDriver};
+use PCore\Redis\Connectors\BaseConnector;
+
 return [
     'default' => 'file',
     'stores' => [
         'file' => [
-            'driver' => 'PCore\Cache\Drivers\FileDriver',
+            'driver' => FileDriver::class,
             'config' => [
                 'path' => __DIR__ . '/../var/cache'
             ]
         ],
         'redis' => [
-            'driver' => 'PCore\Cache\Drivers\RedisDriver',
+            'driver' => RedisDriver::class,
             'config' => [
-                'connector' => 'PCore\Redis\Connectors\BaseConnector',
+                'connector' => BaseConnector::class,
                 'config' => []
             ]
         ],
         'memcached' => [
-            'driver' => 'PCore\Cache\Drivers\MemcachedDriver',
+            'driver' => MemcachedDriver::class,
             'config' => [
                 'host' => '127.0.0.1',
                 'port' => 11211

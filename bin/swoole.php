@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\Kernel\{Bootstrap, Kernel};
 use PCore\Di\Context;
-use PCore\HttpMessage\ServerRequest;
+use PCore\HttpServer\ServerRequest;
 use PCore\HttpServer\ResponseEmitter\SwooleResponseEmitter;
 use Swoole\Constant;
 use Swoole\Http\{Request, Response, Server};

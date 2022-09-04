@@ -23,7 +23,7 @@ class Console
      */
     public function run(): void
     {
-        $config = Scanner::scanConfig(base_path('vendor/composer/installed.json'));
+        $config = Scanner::scanConfig(basePath('vendor/composer/installed.json'));
         $application = new Application();
         foreach (array_merge($this->commands, $config['commands'], CommandCollector::all()) as $command) {
             $application->add(new $command());

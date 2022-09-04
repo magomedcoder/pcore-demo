@@ -2,20 +2,27 @@
 
 declare(strict_types=1);
 
+use App\Kernel\Logger;
+use PCore\Config\Contracts\ConfigInterface;
+use PCore\Config\Repository;
+use PCore\Console\CommandCollector;
+use PCore\Event\{EventDispatcher, ListenerCollector};
+use PCore\HttpServer\{RouteCollector, RouteDispatcher};
+use PCore\HttpServer\Contracts\RouteDispatcherInterface;
+use Psr\EventDispatcher\EventDispatcherInterface;
+use Psr\Log\LoggerInterface;
+
 return [
     'aop' => [
         'cache' => false,
         'paths' => ['./src'],
         'runtimeDir' => './var/runtime',
-        'collectors' => [
-            'PCore\HttpServer\RouteCollector',
-            'PCore\Event\ListenerCollector',
-            'PCore\Console\CommandCollector'
-        ]
+        'collectors' => [RouteCollector::class, ListenerCollector::class, CommandCollector::class]
     ],
     'bindings' => [
-        'PCore\Config\Contracts\ConfigInterface' => 'PCore\Config\Repository',
-        'Psr\EventDispatcher\EventDispatcherInterface' => 'PCore\Event\EventDispatcher',
-        'Psr\Log\LoggerInterface' => 'App\Kernel\Logger'
+        EventDispatcherInterface::class => EventDispatcher::class,
+        RouteDispatcherInterface::class => RouteDispatcher::class,
+        ConfigInterface::class => Repository::class,
+        LoggerInterface::class => Logger::class
     ]
 ];

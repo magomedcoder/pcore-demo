@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use PCore\Session\Handlers\FileHandler;
+
 return [
-    'handler' => 'PCore\Session\Handlers\FileHandler',
+    'handler' => FileHandler::class,
     'config' => [
         'path' => __DIR__ . '/../var/session',
         'gcDivisor' => 100,

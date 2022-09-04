@@ -16,12 +16,12 @@ class Post extends Model
     /**
      * @var string
      */
-    protected string $table = 'posts';
+    protected static string $table = 'posts';
 
     /**
      * @var array|string[]
      */
-    protected array $fillable = [
+    protected static array $fillable = [
         'id',
         'content',
         'created_at'
@@ -30,7 +30,7 @@ class Post extends Model
     /**
      * @var array|string[]
      */
-    protected array $cast = [
+    protected static array $cast = [
         'created_at' => 'integer'
     ];
 
