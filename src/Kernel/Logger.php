@@ -5,6 +5,7 @@ namespace App\Kernel;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Logger as MonoLogger;
 use PCore\Utils\Logger as BaseLogger;
+use function PCore\Init\basePath;
 
 /**
  * Class Logger

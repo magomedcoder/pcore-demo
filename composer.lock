@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6e7139b0c8e7e51630d3bad766e1f36",
+    "content-hash": "8ced28efc5b6d6219766c13ff8c79dfa",
     "packages": [
         {
             "name": "brick/math",
@@ -139,28 +139,28 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89"
+                "reference": "ade2b3bbfb776f27f0558e26eed43b5d9fe1b392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89",
-                "reference": "8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/ade2b3bbfb776f27f0558e26eed43b5d9fe1b392",
+                "reference": "ade2b3bbfb776f27f0558e26eed43b5d9fe1b392",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^8.2",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0",
-                "vimeo/psalm": "^4.10"
+                "doctrine/coding-standard": "^9",
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.3",
+                "phpunit/phpunit": "^8.5 || ^9.5",
+                "vimeo/psalm": "^4.25"
             },
             "type": "library",
             "autoload": {
@@ -210,7 +210,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.0.4"
+                "source": "https://github.com/doctrine/inflector/tree/2.0.5"
             },
             "funding": [
                 {
@@ -226,7 +226,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-22T20:16:43+00:00"
+            "time": "2022-09-07T09:01:28+00:00"
         },
         {
             "name": "league/commonmark",
@@ -582,20 +582,20 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "0af4e3de4df9f1543534beab255ccf459e7a2c99"
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/0af4e3de4df9f1543534beab255ccf459e7a2c99",
-                "reference": "0af4e3de4df9f1543534beab255ccf459e7a2c99",
+                "url": "https://api.github.com/repos/nette/utils/zipball/02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
+                "reference": "02a54c4c872b99e4ec05c4aec54b5a06eb0f6368",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2 <8.2"
+                "php": ">=7.2 <8.3"
             },
             "conflict": {
                 "nette/di": "<3.0.6"
@@ -661,9 +661,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.7"
+                "source": "https://github.com/nette/utils/tree/v3.2.8"
             },
-            "time": "2022-01-24T11:29:14+00:00"
+            "time": "2022-09-12T23:36:20+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -723,22 +723,22 @@
         },
         {
             "name": "pcore/aop",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/aop.git",
-                "reference": "3f065c67f831de14bafa087239e43755d23cd000"
+                "reference": "60ea66d4a87162013cf49a8aef3a0c9dc832bcfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/aop/zipball/3f065c67f831de14bafa087239e43755d23cd000",
-                "reference": "3f065c67f831de14bafa087239e43755d23cd000",
+                "url": "https://api.github.com/repos/pcore-framework/aop/zipball/60ea66d4a87162013cf49a8aef3a0c9dc832bcfe",
+                "reference": "60ea66d4a87162013cf49a8aef3a0c9dc832bcfe",
                 "shasum": ""
             },
             "require": {
                 "ext-pcntl": "*",
                 "nikic/php-parser": "^4.13",
-                "pcore/utils": "v1.4.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0",
                 "symfony/finder": "^6.0"
             },
@@ -769,27 +769,27 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/aop/issues",
-                "source": "https://github.com/pcore-framework/aop/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/aop/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:53:42+00:00"
+            "time": "2022-09-24T13:41:58+00:00"
         },
         {
             "name": "pcore/cache",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/cache.git",
-                "reference": "cb34c51fbb701ae43bc6ee1b0860b01587ffe6c6"
+                "reference": "1e40846a52308d1ed2ca7782b72033e94f48694a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/cache/zipball/cb34c51fbb701ae43bc6ee1b0860b01587ffe6c6",
-                "reference": "cb34c51fbb701ae43bc6ee1b0860b01587ffe6c6",
+                "url": "https://api.github.com/repos/pcore-framework/cache/zipball/1e40846a52308d1ed2ca7782b72033e94f48694a",
+                "reference": "1e40846a52308d1ed2ca7782b72033e94f48694a",
                 "shasum": ""
             },
             "require": {
-                "pcore/redis": "v1.4.*",
-                "pcore/utils": "v1.4.*",
+                "pcore/redis": "v1.5.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0",
                 "psr/simple-cache": "^1.0"
             },
@@ -825,26 +825,26 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/cache/issues",
-                "source": "https://github.com/pcore-framework/cache/tree/v1.3.0"
+                "source": "https://github.com/pcore-framework/cache/tree/v1.4.0"
             },
-            "time": "2022-09-04T14:43:35+00:00"
+            "time": "2022-09-24T13:41:55+00:00"
         },
         {
             "name": "pcore/config",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/config.git",
-                "reference": "7c54d090111aab8e715f10e725da0d334f3a5d73"
+                "reference": "4c557ec160ff2e0a0a8e410ee7bb70a3eed9f9e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/config/zipball/7c54d090111aab8e715f10e725da0d334f3a5d73",
-                "reference": "7c54d090111aab8e715f10e725da0d334f3a5d73",
+                "url": "https://api.github.com/repos/pcore-framework/config/zipball/4c557ec160ff2e0a0a8e410ee7bb70a3eed9f9e2",
+                "reference": "4c557ec160ff2e0a0a8e410ee7bb70a3eed9f9e2",
                 "shasum": ""
             },
             "require": {
-                "pcore/utils": "v1.4.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0"
             },
             "type": "library",
@@ -879,22 +879,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/config/issues",
-                "source": "https://github.com/pcore-framework/config/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/config/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:53:38+00:00"
+            "time": "2022-09-24T13:41:54+00:00"
         },
         {
             "name": "pcore/console",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/console.git",
-                "reference": "7e1d0070ada0508dc55ee40c332f0a7f1b5866c6"
+                "reference": "0f894e225f851721e161453601fb6d44c6da7de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/console/zipball/7e1d0070ada0508dc55ee40c332f0a7f1b5866c6",
-                "reference": "7e1d0070ada0508dc55ee40c332f0a7f1b5866c6",
+                "url": "https://api.github.com/repos/pcore-framework/console/zipball/0f894e225f851721e161453601fb6d44c6da7de2",
+                "reference": "0f894e225f851721e161453601fb6d44c6da7de2",
                 "shasum": ""
             },
             "require": {
@@ -902,11 +902,6 @@
                 "symfony/console": "^6.0"
             },
             "type": "library",
-            "extra": {
-                "pcore": {
-                    "config": "PCore\\Console\\ConfigProvider"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "PCore\\Console\\": "src/"
@@ -933,78 +928,28 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/console/issues",
-                "source": "https://github.com/pcore-framework/console/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/console/tree/v1.5.0"
             },
-            "time": "2022-09-04T20:30:02+00:00"
-        },
-        {
-            "name": "pcore/context",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pcore-framework/context.git",
-                "reference": "2bbac883debec4b23e34732c8017561c68ef174b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/context/zipball/2bbac883debec4b23e34732c8017561c68ef174b",
-                "reference": "2bbac883debec4b23e34732c8017561c68ef174b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PCore\\Context\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Magomedcoder",
-                    "email": "info@magomedcoder.ru"
-                }
-            ],
-            "description": "The context component for PCore",
-            "homepage": "https://github.com/pcore-framework/context",
-            "keywords": [
-                "framework",
-                "pcore",
-                "pcore-component",
-                "pcore-framework",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/pcore-framework/context/issues",
-                "source": "https://github.com/pcore-framework/context/tree/v1.2.0"
-            },
-            "time": "2022-09-04T09:38:17+00:00"
+            "time": "2022-09-11T19:47:12+00:00"
         },
         {
             "name": "pcore/database",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/database.git",
-                "reference": "033a87adaf0db3f8986b9bf143ac6f264316a126"
+                "reference": "58aef24eee3ec3fca27dcc8d996471945824ef9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/database/zipball/033a87adaf0db3f8986b9bf143ac6f264316a126",
-                "reference": "033a87adaf0db3f8986b9bf143ac6f264316a126",
+                "url": "https://api.github.com/repos/pcore-framework/database/zipball/58aef24eee3ec3fca27dcc8d996471945824ef9a",
+                "reference": "58aef24eee3ec3fca27dcc8d996471945824ef9a",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-pdo": "*",
-                "pcore/config": "v1.4.*",
-                "pcore/context": "v1.2.*",
-                "pcore/utils": "v1.4.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0"
             },
             "type": "library",
@@ -1039,22 +984,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/database/issues",
-                "source": "https://github.com/pcore-framework/database/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/database/tree/v1.5.0"
             },
-            "time": "2022-09-04T20:26:13+00:00"
+            "time": "2022-09-24T13:41:51+00:00"
         },
         {
             "name": "pcore/di",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/di.git",
-                "reference": "6df804638703ba92bff46a9d6b08a76b0b67e23d"
+                "reference": "bdc12d55e5771d5b7a47f696ef624f03e156b861"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/di/zipball/6df804638703ba92bff46a9d6b08a76b0b67e23d",
-                "reference": "6df804638703ba92bff46a9d6b08a76b0b67e23d",
+                "url": "https://api.github.com/repos/pcore-framework/di/zipball/bdc12d55e5771d5b7a47f696ef624f03e156b861",
+                "reference": "bdc12d55e5771d5b7a47f696ef624f03e156b861",
                 "shasum": ""
             },
             "require": {
@@ -1091,22 +1036,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/di/issues",
-                "source": "https://github.com/pcore-framework/di/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/di/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:30:30+00:00"
+            "time": "2022-09-24T11:10:07+00:00"
         },
         {
             "name": "pcore/event",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/event.git",
-                "reference": "51ae909bfed13a055729d2e97fbb2971bf2140da"
+                "reference": "4f54f64b86fc7dabc1722daa2fc1c2d1c17cd72c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/event/zipball/51ae909bfed13a055729d2e97fbb2971bf2140da",
-                "reference": "51ae909bfed13a055729d2e97fbb2971bf2140da",
+                "url": "https://api.github.com/repos/pcore-framework/event/zipball/4f54f64b86fc7dabc1722daa2fc1c2d1c17cd72c",
+                "reference": "4f54f64b86fc7dabc1722daa2fc1c2d1c17cd72c",
                 "shasum": ""
             },
             "require": {
@@ -1145,26 +1090,26 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/event/issues",
-                "source": "https://github.com/pcore-framework/event/tree/v1.3.0"
+                "source": "https://github.com/pcore-framework/event/tree/v1.4.0"
             },
-            "time": "2022-09-04T09:38:25+00:00"
+            "time": "2022-09-24T11:07:22+00:00"
         },
         {
             "name": "pcore/http-message",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/http-message.git",
-                "reference": "07ea4ffe3ac847df955655a3b4cfa3786d390d00"
+                "reference": "170f6a5edd77a8f364e221e41486cb0a52332037"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/http-message/zipball/07ea4ffe3ac847df955655a3b4cfa3786d390d00",
-                "reference": "07ea4ffe3ac847df955655a3b4cfa3786d390d00",
+                "url": "https://api.github.com/repos/pcore-framework/http-message/zipball/170f6a5edd77a8f364e221e41486cb0a52332037",
+                "reference": "170f6a5edd77a8f364e221e41486cb0a52332037",
                 "shasum": ""
             },
             "require": {
-                "pcore/session": "v1.3.*",
+                "pcore/session": "v1.4.*",
                 "php": "^8.0",
                 "psr/http-message": "^1.0"
             },
@@ -1198,35 +1143,40 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/http-message/issues",
-                "source": "https://github.com/pcore-framework/http-message/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/http-message/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:53:32+00:00"
+            "time": "2022-09-24T13:41:48+00:00"
         },
         {
             "name": "pcore/http-server",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/http-server.git",
-                "reference": "27fe7439166ad9667f592cf67cc2684a149d2343"
+                "reference": "e0fe965d9a9af6a20e01d2bf1841d2bc2a071587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/http-server/zipball/27fe7439166ad9667f592cf67cc2684a149d2343",
-                "reference": "27fe7439166ad9667f592cf67cc2684a149d2343",
+                "url": "https://api.github.com/repos/pcore-framework/http-server/zipball/e0fe965d9a9af6a20e01d2bf1841d2bc2a071587",
+                "reference": "e0fe965d9a9af6a20e01d2bf1841d2bc2a071587",
                 "shasum": ""
             },
             "require": {
-                "pcore/di": "v1.4.*",
-                "pcore/http-message": "v1.4.*",
-                "pcore/routing": "v1.4.*",
-                "pcore/utils": "v1.4.*",
+                "pcore/di": "v1.5.*",
+                "pcore/http-message": "v1.5.*",
+                "pcore/routing": "v1.5.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0",
                 "psr/event-dispatcher": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "pcore": {
+                    "config": "PCore\\HttpServer\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PCore\\HttpServer\\": "src/"
@@ -1253,22 +1203,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/http-server/issues",
-                "source": "https://github.com/pcore-framework/http-server/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/http-server/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:53:33+00:00"
+            "time": "2022-09-24T13:41:49+00:00"
         },
         {
             "name": "pcore/init",
-            "version": "v1.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/init.git",
-                "reference": "ed59c9d142e2e59311542eb6dd0f3f0a71e5af33"
+                "reference": "edb7b8cf1f284ba9aedf887f5932cda0ef332e5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/init/zipball/ed59c9d142e2e59311542eb6dd0f3f0a71e5af33",
-                "reference": "ed59c9d142e2e59311542eb6dd0f3f0a71e5af33",
+                "url": "https://api.github.com/repos/pcore-framework/init/zipball/edb7b8cf1f284ba9aedf887f5932cda0ef332e5b",
+                "reference": "edb7b8cf1f284ba9aedf887f5932cda0ef332e5b",
                 "shasum": ""
             },
             "require": {
@@ -1304,22 +1254,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/init/issues",
-                "source": "https://github.com/pcore-framework/init/tree/v1.0"
+                "source": "https://github.com/pcore-framework/init/tree/v1.1.0"
             },
-            "time": "2022-09-04T09:38:34+00:00"
+            "time": "2022-09-11T13:13:20+00:00"
         },
         {
             "name": "pcore/redis",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/redis.git",
-                "reference": "cb8ad87c1f28ddc1ac25454851debd38261ad805"
+                "reference": "e18ab68af9663780e237c9b7b4b84f7fdc077b46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/redis/zipball/cb8ad87c1f28ddc1ac25454851debd38261ad805",
-                "reference": "cb8ad87c1f28ddc1ac25454851debd38261ad805",
+                "url": "https://api.github.com/repos/pcore-framework/redis/zipball/e18ab68af9663780e237c9b7b4b84f7fdc077b46",
+                "reference": "e18ab68af9663780e237c9b7b4b84f7fdc077b46",
                 "shasum": ""
             },
             "require": {
@@ -1352,26 +1302,26 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/redis/issues",
-                "source": "https://github.com/pcore-framework/redis/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/redis/tree/v1.5.0"
             },
-            "time": "2022-09-04T09:38:23+00:00"
+            "time": "2022-09-24T11:01:36+00:00"
         },
         {
             "name": "pcore/routing",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/routing.git",
-                "reference": "dc564e1406d8f43360e632633a52231f75020d72"
+                "reference": "15d0b0b20392c43041a2a6038d4ea8f9018e5956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/routing/zipball/dc564e1406d8f43360e632633a52231f75020d72",
-                "reference": "dc564e1406d8f43360e632633a52231f75020d72",
+                "url": "https://api.github.com/repos/pcore-framework/routing/zipball/15d0b0b20392c43041a2a6038d4ea8f9018e5956",
+                "reference": "15d0b0b20392c43041a2a6038d4ea8f9018e5956",
                 "shasum": ""
             },
             "require": {
-                "pcore/http-message": "v1.4.*",
+                "pcore/http-message": "v1.5.*",
                 "php": "^8.0"
             },
             "type": "library",
@@ -1401,27 +1351,27 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/routing/issues",
-                "source": "https://github.com/pcore-framework/routing/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/routing/tree/v1.5.0"
             },
-            "time": "2022-09-04T13:53:35+00:00"
+            "time": "2022-09-24T13:41:53+00:00"
         },
         {
             "name": "pcore/session",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/session.git",
-                "reference": "46e38e7a2b506289528a67baffdec241988e30a6"
+                "reference": "f0d7986d01b64178671728c255a8423332c8898d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/session/zipball/46e38e7a2b506289528a67baffdec241988e30a6",
-                "reference": "46e38e7a2b506289528a67baffdec241988e30a6",
+                "url": "https://api.github.com/repos/pcore-framework/session/zipball/f0d7986d01b64178671728c255a8423332c8898d",
+                "reference": "f0d7986d01b64178671728c255a8423332c8898d",
                 "shasum": ""
             },
             "require": {
-                "pcore/redis": "v1.4.*",
-                "pcore/utils": "v1.4.*",
+                "pcore/redis": "v1.5.*",
+                "pcore/utils": "v1.5.*",
                 "php": "^8.0"
             },
             "type": "library",
@@ -1451,22 +1401,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/session/issues",
-                "source": "https://github.com/pcore-framework/session/tree/v1.3.0"
+                "source": "https://github.com/pcore-framework/session/tree/v1.4.0"
             },
-            "time": "2022-09-04T13:53:37+00:00"
+            "time": "2022-09-24T13:41:52+00:00"
         },
         {
             "name": "pcore/utils",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/utils.git",
-                "reference": "496e19924040a5ab50e778c2998ee1ee3a861f55"
+                "reference": "2ec90614fd4bd1ab9947758aedde8518fb1c91e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/utils/zipball/496e19924040a5ab50e778c2998ee1ee3a861f55",
-                "reference": "496e19924040a5ab50e778c2998ee1ee3a861f55",
+                "url": "https://api.github.com/repos/pcore-framework/utils/zipball/2ec90614fd4bd1ab9947758aedde8518fb1c91e9",
+                "reference": "2ec90614fd4bd1ab9947758aedde8518fb1c91e9",
                 "shasum": ""
             },
             "require": {
@@ -1512,22 +1462,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/utils/issues",
-                "source": "https://github.com/pcore-framework/utils/tree/v1.4.0"
+                "source": "https://github.com/pcore-framework/utils/tree/v1.5.0"
             },
-            "time": "2022-09-04T09:38:32+00:00"
+            "time": "2022-09-18T12:21:48+00:00"
         },
         {
             "name": "pcore/validator",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/validator.git",
-                "reference": "1aee735c69d6fe0290a8de2f1cc6014f48345659"
+                "reference": "4aa378fc32df8502571535fc71cff2269327096e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/validator/zipball/1aee735c69d6fe0290a8de2f1cc6014f48345659",
-                "reference": "1aee735c69d6fe0290a8de2f1cc6014f48345659",
+                "url": "https://api.github.com/repos/pcore-framework/validator/zipball/4aa378fc32df8502571535fc71cff2269327096e",
+                "reference": "4aa378fc32df8502571535fc71cff2269327096e",
                 "shasum": ""
             },
             "require": {
@@ -1561,9 +1511,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/validator/issues",
-                "source": "https://github.com/pcore-framework/validator/tree/v1.1.1"
+                "source": "https://github.com/pcore-framework/validator/tree/v1.1.2"
             },
-            "time": "2022-08-21T16:33:46+00:00"
+            "time": "2022-09-04T09:38:12+00:00"
         },
         {
             "name": "psr/container",
@@ -2017,20 +1967,20 @@
         },
         {
             "name": "ramsey/uuid",
-            "version": "4.4.0",
+            "version": "4.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "373f7bacfcf3de038778ff27dcce5672ddbf4c8a"
+                "reference": "a161a26d917604dc6d3aa25100fddf2556e9f35d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/373f7bacfcf3de038778ff27dcce5672ddbf4c8a",
-                "reference": "373f7bacfcf3de038778ff27dcce5672ddbf4c8a",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/a161a26d917604dc6d3aa25100fddf2556e9f35d",
+                "reference": "a161a26d917604dc6d3aa25100fddf2556e9f35d",
                 "shasum": ""
             },
             "require": {
-                "brick/math": "^0.8 || ^0.9 || ^0.10",
+                "brick/math": "^0.8.8 || ^0.9 || ^0.10",
                 "ext-ctype": "*",
                 "ext-json": "*",
                 "php": "^8.0",
@@ -2051,12 +2001,13 @@
                 "php-mock/php-mock-mockery": "^1.3",
                 "php-parallel-lint/php-parallel-lint": "^1.1",
                 "phpbench/phpbench": "^1.0",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-mockery": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.8",
+                "phpstan/phpstan-mockery": "^1.1",
+                "phpstan/phpstan-phpunit": "^1.1",
                 "phpunit/phpunit": "^8.5 || ^9",
-                "slevomat/coding-standard": "^7.0",
+                "ramsey/composer-repl": "^1.4",
+                "slevomat/coding-standard": "^8.4",
                 "squizlabs/php_codesniffer": "^3.5",
                 "vimeo/psalm": "^4.9"
             },
@@ -2094,7 +2045,7 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.4.0"
+                "source": "https://github.com/ramsey/uuid/tree/4.5.1"
             },
             "funding": [
                 {
@@ -2106,7 +2057,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-05T17:58:37+00:00"
+            "time": "2022-09-16T03:22:46+00:00"
         },
         {
             "name": "symfony/console",

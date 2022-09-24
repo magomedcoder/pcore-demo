@@ -19,8 +19,8 @@ define('BASE_PATH', dirname(__DIR__) . '/');
     }
     Bootstrap::boot(true);
     $worker = new Worker('http://0.0.0.0:2346');
-    /** @var Kernel $kernel */
-    $kernel = Context::getContainer()->make(Kernel::class);
+    $container = Context::getContainer();
+    $kernel = $container->make(Kernel::class);
     $worker->onMessage = function (TcpConnection $connection, Request $request) use ($kernel) {
         (new WorkerManResponseEmitter())->emit($kernel->through(ServerRequest::createFromWorkerManRequest($request, [
             'TcpConnection' => $connection,

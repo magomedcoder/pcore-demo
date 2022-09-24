@@ -4,13 +4,16 @@ declare(strict_types=1);
 
 namespace App\Kernel;
 
+use Exception;
 use PCore\Aop\{Scanner, ScannerConfig};
 use PCore\Config\Repository;
 use PCore\Database\{DatabaseConfig, Manager};
 use PCore\Di\Context;
-use PCore\Event\EventDispatcher;
-use PCore\Event\ListenerProvider;
+use PCore\Event\{EventDispatcher, ListenerProvider};
+use Psr\Container\ContainerExceptionInterface;
 use ReflectionException;
+use function PCore\Init\basePath;
+use function PCore\Init\env;
 use function putenv;
 
 /**
@@ -21,10 +24,11 @@ class Bootstrap
 {
 
     /**
-     * @param bool $enable
-     * @throws ReflectionException
+     * @param bool $aop
+     * @throws ReflectionException|ContainerExceptionInterface
+     * @throws Exception
      */
-    public static function boot(bool $enable = false): void
+    public static function boot(bool $aop = false): void
     {
         $container = Context::getContainer();
         if (file_exists($envFile = basePath('.env'))) {
@@ -41,10 +45,10 @@ class Bootstrap
                 $logger->debug('Сервер запущен.');
             }
         }
-        if ($enable) {
-            Scanner::init(new ScannerConfig($repository->get('di.aop')));
+        if ($aop) {
+            Scanner::init(new ScannerConfig($repository->get('aop')));
         }
-        foreach ($repository->get('di.bindings') as $id => $value) {
+        foreach ($repository->get('di') as $id => $value) {
             $container->bind($id, $value);
         }
         $listenerProvider = $container->make(ListenerProvider::class);

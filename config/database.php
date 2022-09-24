@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use PCore\Database\Connectors\BaseConnector;
 use PCore\Database\DatabaseConfig;
+use function PCore\Init\env;
 
 return [
     'default' => 'mysql',

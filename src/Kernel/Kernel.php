@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\Kernel;
 
+use App\Middlewares\{CorsMiddleware, ExceptionHandleMiddleware};
 use PCore\HttpServer\Kernel as HttpKernel;
+use PCore\HttpServer\Middlewares\{ParseBodyMiddleware, RoutingMiddleware};
 
 /**
  * Class Kernel
@@ -13,11 +15,14 @@ use PCore\HttpServer\Kernel as HttpKernel;
 class Kernel extends HttpKernel
 {
 
+    /**
+     * @var array|string[]
+     */
     protected array $middlewares = [
-        'App\Middlewares\ExceptionHandleMiddleware',
-        'App\Middlewares\CorsMiddleware',
-        'PCore\HttpServer\Middlewares\ParseBodyMiddleware',
-        'PCore\HttpServer\Middlewares\RoutingMiddleware'
+        ExceptionHandleMiddleware::class,
+        CorsMiddleware::class,
+        ParseBodyMiddleware::class,
+        RoutingMiddleware::class
     ];
 
 }

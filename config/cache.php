@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PCore\Cache\Drivers\{FileDriver, MemcachedDriver, RedisDriver};
+use PCore\Cache\Drivers\{ApcDriver, FileDriver, MemcachedDriver, RedisDriver};
 use PCore\Redis\Connectors\BaseConnector;
 
 return [
@@ -27,6 +27,10 @@ return [
                 'host' => '127.0.0.1',
                 'port' => 11211
             ]
+        ],
+        'apcu' => [
+            'driver' => ApcDriver::class,
+            'config' => []
         ]
     ]
 ];

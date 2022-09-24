@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Middlewares;
 
+use App\Exceptions\HttpExceptionHandler;
 use PCore\HttpServer\Middlewares\ExceptionHandleMiddleware as HttpExceptionHandleMiddleware;
 
 /**
@@ -13,8 +14,6 @@ use PCore\HttpServer\Middlewares\ExceptionHandleMiddleware as HttpExceptionHandl
 class ExceptionHandleMiddleware extends HttpExceptionHandleMiddleware
 {
 
-    protected array $exceptionHandlers = [
-        'App\Exceptions\HttpExceptionHandler'
-    ];
+    protected array $exceptionHandlers = [HttpExceptionHandler::class];
 
 }
