@@ -8,10 +8,6 @@ use App\Middlewares\{CorsMiddleware, ExceptionHandleMiddleware};
 use PCore\HttpServer\Kernel as HttpKernel;
 use PCore\HttpServer\Middlewares\{ParseBodyMiddleware, RoutingMiddleware};
 
-/**
- * Class Kernel
- * @package App\Kernel
- */
 class Kernel extends HttpKernel
 {
 

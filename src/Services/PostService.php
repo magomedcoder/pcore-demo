@@ -4,14 +4,9 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Abstracts\AbstractService;
 use App\Repositories\PostRepository;
 
-/**
- * Class PostService
- * @package App\Services
- */
-class PostService extends AbstractService
+class PostService
 {
 
     public function __construct(private PostRepository $repository)
@@ -21,11 +16,12 @@ class PostService extends AbstractService
 
     /**
      * @param array $data
+     * @return array
      */
-    public function create(array $data)
+    public function create(array $data): array
     {
         $postId = $this->repository->create($data);
-        $this->setData(['postId' => $postId]);
+        return ['postId' => $postId];
     }
 
     /**

@@ -2,27 +2,32 @@
 
 declare(strict_types=1);
 
-use PCore\Database\Connectors\BaseConnector;
-use PCore\Database\DatabaseConfig;
-use function PCore\Init\env;
-
 return [
-    'default' => 'mysql',
+    'default' => 'base',
     'connections' => [
-        'mysql' => [
-            'connector' => BaseConnector::class,
-            'options' => [
-                DatabaseConfig::OPTION_DRIVER => 'mysql',
-                DatabaseConfig::OPTION_HOST => env('DB_HOST', 'localhost'),
-                DatabaseConfig::OPTION_PORT => 3306,
-                DatabaseConfig::OPTION_POOL_SIZE => 12,
-                DatabaseConfig::OPTION_UNIX_SOCKET => null,
-                DatabaseConfig::OPTION_USER => env('DB_USER', 'user'),
-                DatabaseConfig::OPTION_PASSWORD => env('DB_PASS', 'password'),
-                DatabaseConfig::OPTION_DB_NAME => env('DB_NAME', 'db'),
-                DatabaseConfig::OPTION_OPTIONS => [],
-                DatabaseConfig::OPTION_CHARSET => 'utf8mb4'
-            ]
-        ]
+        'base' => new PCore\Database\Connectors\BaseConnector(
+            'mysql',
+            env('DB_HOST', 'localhost'),
+            3306,
+            env('DB_NAME', 'db'),
+            env('DB_USER', 'user'),
+            env('DB_PASS', 'password')
+        ),
+//        'basePool' => new PCore\Database\Connectors\BasePoolConnector(
+//            'mysql',
+//            env('DB_HOST', 'localhost'),
+//            3306,
+//            env('DB_NAME', 'db'),
+//            env('DB_USER', 'user'),
+//            env('DB_PASS', 'password')
+//        ),
+//        'swoolePool' => new PCore\Database\Connectors\SwoolePoolConnector(
+//            'mysql',
+//            env('DB_HOST', 'localhost'),
+//            3306,
+//            env('DB_NAME', 'db'),
+//            env('DB_USER', 'user'),
+//            env('DB_PASS', 'password')
+//        )
     ]
 ];

@@ -6,8 +6,7 @@ use App\Kernel\{Bootstrap, Console};
 
 define('BASE_PATH', dirname(__DIR__) . '/');
 
-(function () {
-    require_once './vendor/autoload.php';
-    Bootstrap::boot(true);
-    (new Console())->run();
-})();
+require_once './vendor/autoload.php';
+
+Bootstrap::boot(true);
+(new Console())->run();

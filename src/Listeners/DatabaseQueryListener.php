@@ -8,10 +8,6 @@ use PCore\Database\Events\QueryExecuted;
 use PCore\Event\Contracts\EventListenerInterface;
 use Psr\Log\LoggerInterface;
 
-/**
- * Class DatabaseQueryListener
- * @package App\Listeners
- */
 class DatabaseQueryListener implements EventListenerInterface
 {
 
@@ -36,7 +32,7 @@ class DatabaseQueryListener implements EventListenerInterface
             $this->logger->get('sql')->debug(
                 $event->query,
                 [
-                    'duration' => microtime(true) - $event->executedAt,
+                    'time' => $event->time,
                     'bindings' => $event->bindings
                 ]
             );

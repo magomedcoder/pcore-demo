@@ -6,10 +6,6 @@ namespace App\Repositories;
 
 use App\Models\Post;
 
-/**
- * Class PostRepository
- * @package App\Repositories
- */
 class PostRepository
 {
 
@@ -37,9 +33,8 @@ class PostRepository
     public function get(): array
     {
         return $this->model::query()
-            ->order('id', 'DESC')
-            ->get()
-            ->toArray();
+            ->orderBy('id', 'DESC')
+            ->get();
     }
 
 }

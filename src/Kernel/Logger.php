@@ -5,12 +5,7 @@ namespace App\Kernel;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Logger as MonoLogger;
 use PCore\Utils\Logger as BaseLogger;
-use function PCore\Init\basePath;
 
-/**
- * Class Logger
- * @package App\Kernel
- */
 class Logger extends BaseLogger
 {
 
@@ -21,7 +16,7 @@ class Logger extends BaseLogger
                 basePath('var/log/app.log'),
                 180,
                 MonoLogger::DEBUG
-            ),
+            )
         ]);
         $this->logger['sql'] = new MonoLogger('sql', [
             new RotatingFileHandler(

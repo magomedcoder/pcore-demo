@@ -6,13 +6,12 @@ namespace App\Middlewares;
 
 use PCore\HttpServer\Middlewares\CorsMiddleware as BaseCorsMiddleware;
 
-/**
- * Class CorsMiddleware
- * @package App\Middlewares
- */
 class CorsMiddleware extends BaseCorsMiddleware
 {
 
+    /**
+     * @var array|string[]
+     */
     protected array $allowOrigin = ['*'];
 
 }

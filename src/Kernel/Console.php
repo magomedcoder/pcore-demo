@@ -6,10 +6,6 @@ namespace App\Kernel;
 
 use PCore\Console\Console as ConsoleKernel;
 
-/**
- * Class Console
- * @package App\Kernel
- */
 class Console extends ConsoleKernel
 {
 

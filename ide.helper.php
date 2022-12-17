@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Psr\Http\Message {
 
-    use PCore\HttpMessage\Response;
-    use PCore\HttpMessage\ServerRequest;
+    use PCore\HttpMessage\{Response, ServerRequest};
 
     /**
      * @mixin ServerRequest
@@ -19,7 +18,6 @@ namespace Psr\Http\Message {
      */
     interface ResponseInterface
     {
-
     }
 
 }

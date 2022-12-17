@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use PCore\Database\Models\Model;
+use PCore\Database\Model;
 
-/**
- * Class Post
- * @package App\Models
- */
 class Post extends Model
 {
 

@@ -7,19 +7,13 @@ namespace App\Kernel;
 use Exception;
 use PCore\Aop\{Scanner, ScannerConfig};
 use PCore\Config\Repository;
-use PCore\Database\{DatabaseConfig, Manager};
+use PCore\Database\Manager;
 use PCore\Di\Context;
 use PCore\Event\{EventDispatcher, ListenerProvider};
 use Psr\Container\ContainerExceptionInterface;
 use ReflectionException;
-use function PCore\Init\basePath;
-use function PCore\Init\env;
 use function putenv;
 
-/**
- * Class Bootstrap
- * @package App\Kernel
- */
 class Bootstrap
 {
 
@@ -37,20 +31,30 @@ class Bootstrap
                 putenv(sprintf('%s=%s', $key, $value));
             }
         }
+        /**
+         * @var Repository
+         */
         $repository = $container->make(Repository::class);
         $repository->scan(basePath('./config'));
-        if (env('LOGGING_START')) {
-            $logger = $container->make(Logger::class);
-            if ('cli' === PHP_SAPI) {
-                $logger->debug('Сервер запущен.');
-            }
-        }
         if ($aop) {
-            Scanner::init(new ScannerConfig($repository->get('aop')));
+            Scanner::init(new ScannerConfig($repository->get('di.aop')));
+            file_put_contents(basePath('var/app/master.pid'), getmypid());
         }
-        foreach ($repository->get('di') as $id => $value) {
+        $config = [];
+        if (file_exists($configFile = basePath('var/app/config.php'))) {
+            $config = require $configFile;
+        }
+        $repository->set('config', $config);
+        $bindings = array_merge(
+            config('config.bindings', []),
+            $repository->get('di.bindings', [])
+        );
+        foreach ($bindings as $id => $value) {
             $container->bind($id, $value);
         }
+        /**
+         * @var ListenerProvider
+         */
         $listenerProvider = $container->make(ListenerProvider::class);
         if (!empty($listeners = $repository->get('listeners', []))) {
             foreach ($listeners as $listener) {
@@ -58,15 +62,16 @@ class Bootstrap
             }
         }
         $database = $repository->get('database');
+        /**
+         * @var Manager
+         */
         $manager = $container->make(Manager::class);
         $manager->setDefault($database['default']);
         foreach ($database['connections'] as $name => $config) {
-            $connector = $config['connector'];
-            $options = $config['options'];
-            $manager->addConnector($name, new $connector(new DatabaseConfig($options)));
+            $manager->addConnector($name, $config);
         }
         $manager->setEventDispatcher($container->make(EventDispatcher::class));
-        $manager->bootEloquent();
+        $manager->boot();
     }
 
 }

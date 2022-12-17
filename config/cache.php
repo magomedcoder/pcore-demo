@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PCore\Cache\Drivers\{ApcDriver, FileDriver, MemcachedDriver, RedisDriver};
+use PCore\Cache\Drivers\{ApcuDriver, FileDriver, MemcachedDriver, RedisDriver};
 use PCore\Redis\Connectors\BaseConnector;
 
 return [
@@ -29,7 +29,7 @@ return [
             ]
         ],
         'apcu' => [
-            'driver' => ApcDriver::class,
+            'driver' => ApcuDriver::class,
             'config' => []
         ]
     ]
