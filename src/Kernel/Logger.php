@@ -25,6 +25,13 @@ class Logger extends BaseLogger
                 MonoLogger::DEBUG
             )
         ]);
+        $this->logger['validator'] = new MonoLogger('sql', [
+            new RotatingFileHandler(
+                basePath('var/log/validator.log'),
+                180,
+                MonoLogger::DEBUG
+            )
+        ]);
     }
 
 }

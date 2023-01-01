@@ -6,7 +6,7 @@ use PCore\Config\Repository;
 use PCore\Di\Context;
 use Psr\Container\{ContainerExceptionInterface, NotFoundExceptionInterface};
 
-if (false === function_exists('basePath')) {
+if (function_exists('basePath') === false) {
     /**
      * @param string $path
      * @return string
@@ -36,7 +36,7 @@ if (function_exists('config') === false) {
     }
 }
 
-if (false === function_exists('env')) {
+if (function_exists('env') === false) {
     /**
      * @param string $key
      * @param $default

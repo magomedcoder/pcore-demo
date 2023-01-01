@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace App\Abstracts;
 
+use App\Exceptions\ValidateException;
 use PCore\Validator\Exceptions\ValidatorException;
 use PCore\Validator\Validator;
+use Psr\Log\LoggerInterface;
 
-/**
- * Class AbstractController
- * @package App\Abstracts
- */
 abstract class AbstractController
 {
 
+    public function __construct(protected LoggerInterface $logger)
+    {
+    }
+
     /**
-     * @param mixed ...$arg
+     * @param ...$arg
      * @return Validator
      */
     protected function validate(...$arg): Validator
@@ -25,7 +27,11 @@ abstract class AbstractController
         try {
             $validator->validate();
         } catch (ValidatorException $e) {
-
+            $this->logger->get('validator')
+                ->debug($e, []);
+        }
+        if ($validator->fails()) {
+            throw new ValidateException(['fields' => $validator->failed()]);
         }
         return $validator;
     }

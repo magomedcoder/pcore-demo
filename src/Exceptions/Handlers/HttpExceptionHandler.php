@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Exceptions;
+namespace App\Exceptions\Handlers;
 
 use PCore\HttpMessage\Exceptions\HttpException;
 use PCore\HttpMessage\Response;
@@ -10,13 +10,14 @@ use PCore\HttpServer\Contracts\{ExceptionHandlerInterface, StoppableExceptionHan
 use Psr\Http\Message\{ResponseInterface, ServerRequestInterface};
 use Throwable;
 
-/**
- * Class HttpExceptionHandler
- * @package App\Exceptions
- */
 class HttpExceptionHandler implements ExceptionHandlerInterface, StoppableExceptionHandlerInterface
 {
 
+    /**
+     * @param Throwable $throwable
+     * @param ServerRequestInterface $request
+     * @return ResponseInterface|null
+     */
     public function handle(Throwable $throwable, ServerRequestInterface $request): ?ResponseInterface
     {
         return Response::json(false, null, [
@@ -27,6 +28,10 @@ class HttpExceptionHandler implements ExceptionHandlerInterface, StoppableExcept
         ], $statusCode);
     }
 
+    /**
+     * @param Throwable $throwable
+     * @return bool
+     */
     public function isValid(Throwable $throwable): bool
     {
         return $throwable instanceof HttpException;
