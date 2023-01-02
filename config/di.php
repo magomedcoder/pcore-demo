@@ -2,17 +2,12 @@
 
 declare(strict_types=1);
 
-use App\Kernel\Logger;
+use App\Kernel\{Kernel, Logger};
 use PCore\Aop\Collectors\{AspectCollector, PropertyAttributeCollector};
-use PCore\Config\Contracts\ConfigInterface;
-use PCore\Config\Repository;
 use PCore\Console\CommandCollector;
-use PCore\Event\{EventDispatcher, ListenerProvider};
-use PCore\Event\ListenerCollector;
-use PCore\HttpServer\Contracts\RouteDispatcherInterface;
-use PCore\HttpServer\RouteDispatcher;
+use PCore\Event\{ListenerCollector};
+use PCore\HttpServer\Contracts\HttpKernelInterface;
 use PCore\Routing\RouteCollector;
-use Psr\EventDispatcher\{EventDispatcherInterface, ListenerProviderInterface};
 use Psr\Log\LoggerInterface;
 
 return [
@@ -29,10 +24,7 @@ return [
         ]
     ],
     'bindings' => [
-        EventDispatcherInterface::class => EventDispatcher::class,
-        ListenerProviderInterface::class => ListenerProvider::class,
-        RouteDispatcherInterface::class => RouteDispatcher::class,
-        ConfigInterface::class => Repository::class,
+        HttpKernelInterface::class => Kernel::class,
         LoggerInterface::class => Logger::class
     ]
 ];

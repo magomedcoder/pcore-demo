@@ -2,7 +2,7 @@
 
 ---
 
-###### Рабочая демонстрация PCore Framework - (Version 1.6)
+###### Это демо приложение создано на основе PCore Framework - (Version 1.6)
 
 ---
 

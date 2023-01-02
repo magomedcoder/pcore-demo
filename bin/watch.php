@@ -13,10 +13,12 @@ $progress = function () {
 
 $progress();
 
-$driver = new FindDriver([__DIR__ . '/../src'], function () use ($progress) {
-    posix_kill((int)file_get_contents(__DIR__ . '/../var/app/master.pid'), SIGTERM);
-
-    $progress();
-});
+$driver = new FindDriver(
+    [__DIR__ . '/../src'],
+    function () use ($progress) {
+        posix_kill((int)file_get_contents(__DIR__ . '/../var/app/master.pid'), SIGTERM);
+        $progress();
+    }
+);
 
 (new Watcher($driver))->run();

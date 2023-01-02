@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-use App\Kernel\{Bootstrap, Kernel};
+use App\Kernel\Bootstrap;
 use PCore\Di\Context;
 use PCore\Event\EventDispatcher;
+use PCore\HttpServer\Contracts\HttpKernelInterface;
 use PCore\HttpServer\Events\OnRequest;
 use PCore\HttpServer\ResponseEmitter\WorkerManResponseEmitter;
 use PCore\HttpMessage\ServerRequest;
@@ -22,7 +23,7 @@ define('BASE_PATH', dirname(__DIR__) . '/');
     Bootstrap::boot(true);
     $worker = new Worker('http://0.0.0.0:2346');
     $container = Context::getContainer();
-    $kernel = $container->make(Kernel::class);
+    $kernel = $container->make(HttpKernelInterface::class);
     $eventDispatcher = $container->make(EventDispatcher::class);
     $worker->onMessage = function (TcpConnection $connection, Request $request) use ($kernel, $eventDispatcher) {
         $psrRequest = ServerRequest::createFromWorkerManRequest($request, [

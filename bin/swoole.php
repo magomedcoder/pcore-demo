@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-use App\Kernel\{Bootstrap, Kernel};
+use App\Kernel\Bootstrap;
 use PCore\Di\Context;
 use PCore\Event\EventDispatcher;
 use PCore\HttpMessage\ServerRequest;
+use PCore\HttpServer\Contracts\HttpKernelInterface;
 use PCore\HttpServer\Events\OnRequest;
 use PCore\HttpServer\ResponseEmitter\SwooleResponseEmitter;
 use Swoole\Constant;
@@ -21,7 +22,7 @@ define('BASE_PATH', dirname(__DIR__) . '/');
     Bootstrap::boot(true);
     $server = new Server('0.0.0.0', 9501);
     $container = Context::getContainer();
-    $kernel = $container->make(Kernel::class);
+    $kernel = $container->make(HttpKernelInterface::class);
     $eventDispatcher = $container->make(EventDispatcher::class);
     $server->on('request', function (Request $request, Response $response) use ($kernel, $eventDispatcher) {
         $psrRequest = ServerRequest::createFromSwooleRequest($request, [

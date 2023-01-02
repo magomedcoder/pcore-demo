@@ -826,16 +826,16 @@
         },
         {
             "name": "pcore/config",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/config.git",
-                "reference": "cba3ab475df8a1fa8972bb21aceebfef4e1ef588"
+                "reference": "a80b1de5cb37d87e2df005f7f0d26d08b488a49a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/config/zipball/cba3ab475df8a1fa8972bb21aceebfef4e1ef588",
-                "reference": "cba3ab475df8a1fa8972bb21aceebfef4e1ef588",
+                "url": "https://api.github.com/repos/pcore-framework/config/zipball/a80b1de5cb37d87e2df005f7f0d26d08b488a49a",
+                "reference": "a80b1de5cb37d87e2df005f7f0d26d08b488a49a",
                 "shasum": ""
             },
             "require": {
@@ -843,6 +843,11 @@
                 "php": "^8.0"
             },
             "type": "library",
+            "extra": {
+                "pcore": {
+                    "config": "PCore\\Config\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PCore\\Config\\": "src/"
@@ -869,22 +874,22 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/config/issues",
-                "source": "https://github.com/pcore-framework/config/tree/v1.6.0"
+                "source": "https://github.com/pcore-framework/config/tree/v1.6.1"
             },
-            "time": "2022-12-17T11:39:57+00:00"
+            "time": "2023-01-02T08:55:36+00:00"
         },
         {
             "name": "pcore/console",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/console.git",
-                "reference": "28f6d2564ed458f072fa73be8fdb8135be2070a9"
+                "reference": "1cde2d98c6e777c5a3a557b5650aaf2e1293a7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/console/zipball/28f6d2564ed458f072fa73be8fdb8135be2070a9",
-                "reference": "28f6d2564ed458f072fa73be8fdb8135be2070a9",
+                "url": "https://api.github.com/repos/pcore-framework/console/zipball/1cde2d98c6e777c5a3a557b5650aaf2e1293a7ec",
+                "reference": "1cde2d98c6e777c5a3a557b5650aaf2e1293a7ec",
                 "shasum": ""
             },
             "require": {
@@ -892,6 +897,11 @@
                 "symfony/console": "^6.0"
             },
             "type": "library",
+            "extra": {
+                "pcore": {
+                    "config": "PCore\\Console\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PCore\\Console\\": "src/"
@@ -918,9 +928,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/console/issues",
-                "source": "https://github.com/pcore-framework/console/tree/v1.6.0"
+                "source": "https://github.com/pcore-framework/console/tree/v1.6.1"
             },
-            "time": "2022-12-16T21:47:04+00:00"
+            "time": "2023-01-02T13:04:53+00:00"
         },
         {
             "name": "pcore/database",
@@ -1027,16 +1037,16 @@
         },
         {
             "name": "pcore/event",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/event.git",
-                "reference": "5115ba0225af8c40348da956c40ce16c4f7e19dd"
+                "reference": "5335942d868d0d92a98aa93723be49d156ef93f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/event/zipball/5115ba0225af8c40348da956c40ce16c4f7e19dd",
-                "reference": "5115ba0225af8c40348da956c40ce16c4f7e19dd",
+                "url": "https://api.github.com/repos/pcore-framework/event/zipball/5335942d868d0d92a98aa93723be49d156ef93f0",
+                "reference": "5335942d868d0d92a98aa93723be49d156ef93f0",
                 "shasum": ""
             },
             "require": {
@@ -1044,6 +1054,11 @@
                 "psr/event-dispatcher": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "pcore": {
+                    "config": "PCore\\Event\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PCore\\Event\\": "src/"
@@ -1070,9 +1085,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/event/issues",
-                "source": "https://github.com/pcore-framework/event/tree/v1.5.0"
+                "source": "https://github.com/pcore-framework/event/tree/v1.5.1"
             },
-            "time": "2022-12-17T11:40:02+00:00"
+            "time": "2023-01-02T10:24:31+00:00"
         },
         {
             "name": "pcore/http-message",
@@ -1129,16 +1144,16 @@
         },
         {
             "name": "pcore/http-server",
-            "version": "v1.6.0",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pcore-framework/http-server.git",
-                "reference": "47aee356183607d4ec8f83775100d6ee7ab136f7"
+                "reference": "4af34b1286519c76e80542cb4a11432b594b6221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pcore-framework/http-server/zipball/47aee356183607d4ec8f83775100d6ee7ab136f7",
-                "reference": "47aee356183607d4ec8f83775100d6ee7ab136f7",
+                "url": "https://api.github.com/repos/pcore-framework/http-server/zipball/4af34b1286519c76e80542cb4a11432b594b6221",
+                "reference": "4af34b1286519c76e80542cb4a11432b594b6221",
                 "shasum": ""
             },
             "require": {
@@ -1151,6 +1166,11 @@
                 "psr/http-server-middleware": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "pcore": {
+                    "config": "PCore\\HttpServer\\ConfigProvider"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "PCore\\HttpServer\\": "src/"
@@ -1177,9 +1197,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pcore-framework/http-server/issues",
-                "source": "https://github.com/pcore-framework/http-server/tree/v1.6.0"
+                "source": "https://github.com/pcore-framework/http-server/tree/v1.6.1"
             },
-            "time": "2022-12-01T18:07:55+00:00"
+            "time": "2023-01-02T08:36:09+00:00"
         },
         {
             "name": "pcore/redis",
